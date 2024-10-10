@@ -1,7 +1,8 @@
-function getStudentsByLocation(studentList, city) {
-    return studentList.filter(student => student.city === city);
+export default function getNeighborhoodsList() {
+    this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
+  
+    this.addNeighborhood = (newNeighborhood) => {
+      this.sanFranciscoNeighborhoods.push(newNeighborhood);
+      return this.sanFranciscoNeighborhoods;
+    };
 }
-
-// Example usage
-const studentsInNewYork = getStudentsByLocation(students, 'New York');
-console.log(studentsInNewYork);
